@@ -105,9 +105,9 @@ const Login = () => {
 
   useEffect(() => {
     if (!userDetails || !token) {
-      navigate("/");
+      navigate("/login");
     } else {
-      navigate("login");
+      navigate("/");
     }
   }, [navigate, userDetails, token]);
 
