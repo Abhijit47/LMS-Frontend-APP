@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
-const API_URI = `http://localhost:9999/api/v1`;
+const API_URI = `${process.env.REACT_APP_API_URL}`;
 
 // Get All Courses => public access
 const getCourses = createAsyncThunk("/getCourses", (async ({ category, cb }) => {
