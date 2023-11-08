@@ -1,0 +1,16 @@
+export { default as Dashboard } from "./dashboard/Dashboard";
+export { default as About } from "./about/About";
+export { default as Courses } from "./courses/Courses";
+export { default as CourseDetail } from "./courseDetail/CourseDetail";
+export { default as CreateCourse } from "./createCourse/CreateCourse";
+export { default as ContactUs } from "./contact/ContactUs";
+export { default as SignUp } from "./signup/SignUp";
+export { default as Login } from "./login/Login";
+export { default as ForgotPassword } from "./forgotpassword/ForgotPassword";
+export { default as CreateQuiz } from "./createQuiz/CreateQuiz";
+export { default as CreateVideo } from "./createVideo/CreateVideo";
+export { default as NewPassword } from "./newpassword/NewPassword";
+export { default as NotFound } from "./notFound/NotFound";
+export { default as Profile } from "./profile/Profile";
+export { default as CodePlayground } from "./codePlayground/CodePlayground";
+export { default as ResetPassword } from "./resetpassword/ResetPassword";
