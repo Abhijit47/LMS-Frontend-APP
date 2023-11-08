@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import GenericButton from "../../components/button/GenericButton";
 import GenericFormFooter from "../../components/button/GenericFormFooter";
@@ -12,14 +12,12 @@ import Loader from "../../components/loader/Loader";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    email: "jack123@gmail.com",
-    password: "admin123",
+    email: "",
+    password: "",
   });
   const [isChecked, setIsChecked] = useState(false);
-  // eslint-disable-next-line
-  const { isLoading, isError, userDetails } = useSelector(
-    (state) => state.users,
-  );
+
+  const { isLoading, token, userDetails } = useSelector((state) => state.users);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
@@ -104,6 +102,14 @@ const Login = () => {
       }),
     );
   };
+
+  useEffect(() => {
+    if (userDetails || token) {
+      navigate("/");
+    } else {
+      navigate("login");
+    }
+  }, [navigate, userDetails, token]);
 
   return (
     <Fragment>
